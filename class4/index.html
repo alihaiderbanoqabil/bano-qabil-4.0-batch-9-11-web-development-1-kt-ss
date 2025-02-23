@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 4 of HTML</title>
+</head>
+
+<body>
+    <form onsubmit="onSubmit()">
+        <!-- <input type="text" id="fullname" placeholder="Enter your name" required value="ali haider"> -->
+        <input type="text" id="fullname" placeholder="Enter your name" required>
+        <div>
+            <p>Select your gender</p>
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Female</label>
+            <div>
+
+                <p>Select your major courses</p>
+                <input type="checkbox" name="major-course" id="gd" value="GD">
+                <label for="gd">GD</label>
+                <input type="checkbox" name="major-course" id="mad" value="MAD">
+                <label for="mad">MAD</label>
+                <input type="checkbox" name="major-course" id="wd" value="WD">
+                <label for="wd">WD</label>
+                <input type="checkbox" name="major-course" id="cit" value="CIT">
+                <label for="cit">CIT</label>
+                <input type="checkbox" name="major-course" id="mm" value="MM">
+                <label for="mm">MM</label>
+            </div>
+            <div>
+
+                <p>Select your minor course</p>
+                <input type="checkbox" name="minor-course" id="gd" value="GD">
+                <label for="gd">GD</label>
+                <input type="checkbox" name="minor-course" id="mad" value="MAD">
+                <label for="mad">MAD</label>
+                <input type="checkbox" name="minor-course" id="wd" value="WD">
+                <label for="wd">WD</label>
+                <input type="checkbox" name="minor-course" id="cit" value="CIT">
+                <label for="cit">CIT</label>
+                <input type="checkbox" name="minor-course" id="mm" value="MM">
+                <label for="mm">MM</label>
+            </div>
+
+            <div>
+                <label for="city">Select your city</label>
+
+                <select name="city" id="city">
+                    <option value="">Select your city</option>
+                    <option value="Karachi">Karachi</option>
+                    <option value="Pinid">Pinid</option>
+                    <option value="Islamabad" disabled>Islamabad</option>
+                    <option value="Lahore" selected>Lahore</option>
+                </select>
+            </div>
+
+            <div>
+
+                <label for="cars">Choose a car:</label>
+                <select name="cars" id="cars">
+                    <optgroup label="Swedish Cars">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                    </optgroup>
+                    <optgroup label="German Cars">
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                    </optgroup>
+                </select>
+            </div>
+            <textarea name="" id="" rows="10" cols="100" style="resize: none;"></textarea>
+            <button>Submit</button>
+        </div>
+    </form>
+
+    <table border="1">
+        <caption>Student details</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ali</td>
+                <td>ali@gmail.com</td>
+                <td>123</td>
+            </tr>
+            <tr>
+                <td>Haider</td>
+                <td>haider@gmail.com</td>
+                <td>456</td>
+            </tr>
+        </tbody>
+        <!-- <tfoot>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tfoot> -->
+    </table>
+
+    <!-- <button onclick="onSubmit()">Submit</button> -->
+    <img src="https://tpc.googlesyndication.com/simgad/15544727113460460061" alt="" loading="lazy">
+    <audio controls>
+        <source src="./assets/audios/sample-12s.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+    <video width="320" height="240" controls>
+        <source src="./assets/videos/12956927_1920_1080_25fps.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/5GG-VUvruzE?si=Alk799j3FMB0R-Ai"
+        title="YouTube video player" frameborder="1"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28954.543291059486!2d67.1667253515374!3d24.887135417111423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb339e2c516a007%3A0xc41b941a59b9ffaa!2sKala%20Board%2C%20Karachi%2C%20Pakistan!5e0!3m2!1sen!2s!4v1740290784540!5m2!1sen!2s"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <!-- <script src="script.js"></script> -->
+</body>
+
+</html>

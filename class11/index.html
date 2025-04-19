@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 11 (Class 5 of CSS)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        header {
+            background-color: #25e6dd;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0px;
+            width: calc(100% - 30px);
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #007BFF;
+        }
+
+        .cart {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cart-icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        .cart-count {
+            background: #ff4d4f;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 50%;
+            font-size: 0.8em;
+        }
+
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: #b50707;
+            /* position: fixed; */
+            position: relative;
+            right: 0px;
+            bottom: 0px;
+        }
+
+        /* body {
+            height: 100vh;
+            background-color: cyan;
+        } */
+
+
+        .search-container {
+            position: relative;
+            /* background-color: #ea1515; */
+            width: 50%;
+        }
+
+        input {
+            width: 100%;
+            outline: none;
+            border: none;
+            border-radius: 1rem;
+        }
+
+        .icon {
+            position: absolute;
+            top: 3px;
+            right: 5px;
+        }
+
+
+        #example1 {
+            border: 1px solid;
+            padding: 10px;
+            box-shadow: 5px 10px;
+        }
+
+        #example2 {
+            border: 1px solid;
+            padding: 10px;
+            box-shadow: 5px 10px #888888;
+        }
+
+        #example3 {
+            border: 1px solid;
+            padding: 10px;
+            box-shadow: 5px 10px 10px 40px red;
+        }
+        button{
+            /* border: none;
+            background-color: transparent;
+            font-family: 'Times New Roman', Times, serif;
+            padding: 0; */
+            all: unset;
+        }
+    </style>
+</head>
+
+<body>
+    <button>Submit</button>
+    <!-- <h1>The box-shadow Property</h1>
+    <p>The box-shadow property defines the shadow of an element:</p>
+
+    <h2>box-shadow: 5px 10px:</h2>
+    <div id="example1">
+        <p>A div element with a shadow. The first value is the horizontal offset and the second value is the vertical
+            offset. The shadow color will be inherited from the text color.</p>
+    </div>
+
+    <h2>box-shadow: 5px 10px #888888:</h2>
+    <div id="example2">
+        <p>You can also define the color of the shadow. Here the shadow color is grey.</p>
+    </div>
+
+    <h2>box-shadow: 5px 10px red:</h2>
+    <div id="example3">
+        <p>A red shadow.</p>
+    </div> -->
+    <!-- <div class="search-container">
+        <input type="text" placeholder="Search...">
+        <i class="fa-solid fa-magnifying-glass icon"></i>
+    </div> -->
+
+    <!-- <header>
+        <a href="#" class="logo">MyShop</a>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+        <div class="cart">
+            <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="Cart" class="cart-icon">
+            <span class="cart-count">2</span>
+        </div>
+    </header>
+    <h1>Class 11 (Class 5 of CSS)</h1>
+    <div class="box"></div>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt minima corrupti eligendi sequi mollitia
+        placeat, eos quis, aspernatur, odit veritatis quam nemo ab veniam aut quidem voluptas quod saepe recusandae
+        molestias? Earum iusto eaque obcaecati provident inventore explicabo autem enim, quis omnis culpa sint
+        reiciendis iste ab necessitatibus deleniti laboriosam, commodi deserunt laborum fuga, vero cum voluptas error!
+        Tenetur consequuntur dicta nesciunt itaque quasi nobis saepe recusandae, porro soluta qui repellat quisquam
+        maiores? At necessitatibus exercitationem odio earum soluta, delectus ratione vel quasi praesentium voluptatibus
+        suscipit illum unde dignissimos magnam. Earum delectus eius aspernatur repudiandae officiis nulla eaque enim,
+        distinctio voluptatibus, placeat quibusdam libero nisi, ipsum natus porro. Sint, ad totam! Repellendus,
+        accusamus. Dignissimos, quod doloremque magni ex quo amet hic aliquam harum sed perspiciatis eius quas
+        repudiandae tempora, aut iste consectetur sint similique nihil eligendi exercitationem! Ea similique, dicta
+        facere explicabo, aliquid, praesentium culpa expedita aperiam repellendus sapiente iure repellat quos velit
+        placeat nesciunt in earum reiciendis ipsa. Ad reprehenderit perferendis perspiciatis error ipsa, unde, nobis
+        quaerat maiores in vel neque tempore nulla ea nam voluptatibus necessitatibus amet nisi accusamus iste officia
+        saepe corrupti illo magni. Delectus, dolor, quae commodi molestiae saepe inventore optio natus nam ut quibusdam
+        et provident aliquam? Quos aliquam ut delectus adipisci recusandae assumenda nesciunt, nihil eveniet minima
+        omnis et fuga aliquid eaque est incidunt hic architecto nam! Quae nobis modi, in vero omnis, ad qui quia nulla,
+        sint voluptatum explicabo! Nihil non vitae porro quae nesciunt amet alias ea vel ut fuga blanditiis omnis in
+        dolor impedit qui molestiae facilis ipsam soluta, error laudantium dignissimos sit rerum. Nulla, aperiam
+        dignissimos excepturi quos magnam velit aliquid sequi ex, tenetur, fugit voluptas optio illum? Vel qui ratione
+        voluptas perferendis quo repudiandae debitis delectus doloribus accusamus est. Temporibus ad obcaecati magnam
+        enim tempora maiores officia voluptas, necessitatibus beatae maxime sit minus porro quia exercitationem. Tempore
+        nesciunt placeat veniam, debitis aliquam ex repudiandae animi adipisci reiciendis soluta ea qui eius temporibus
+        sed unde, totam perspiciatis harum corrupti sit. Quos ducimus totam velit neque minus minima officiis?
+        Necessitatibus ea architecto recusandae asperiores possimus veniam, eius facilis! Officiis, voluptate corrupti.
+        Corporis praesentium sed, ipsa quis excepturi recusandae veritatis consequatur ipsam asperiores harum autem
+        facilis odio in repellat quidem iusto. Sed explicabo reprehenderit quis illum soluta quod quibusdam deserunt.
+        Quasi voluptates voluptatibus magni nostrum vitae reiciendis voluptatum, fuga itaque minima quia quos sit
+        dignissimos laborum animi a suscipit nihil blanditiis, quod explicabo omnis dolores, aliquid officiis similique
+        soluta? Commodi deserunt porro dolores corrupti ipsum, et exercitationem quasi deleniti itaque eaque officiis
+        eos! Eaque dicta vero ullam perspiciatis unde explicabo quod quibusdam suscipit minima tempore. Modi totam,
+        eveniet quis sunt earum impedit reiciendis officiis voluptatibus autem, optio excepturi libero temporibus
+        consectetur eligendi? Rem qui enim vero iste, corporis voluptas atque animi accusantium! Laboriosam facilis enim
+        modi ratione explicabo, accusantium doloribus vitae laborum ea. Maiores commodi quos accusamus corporis,
+        corrupti expedita unde ad fugit eveniet, a recusandae ducimus placeat molestias ipsam quas, voluptatibus
+        incidunt explicabo mollitia consequuntur earum! Quo, consequuntur. Incidunt inventore sit a molestiae illo, iure
+        corrupti, reiciendis, repellendus consequuntur optio ratione non veritatis voluptatem et velit perspiciatis
+        nihil excepturi nam! Temporibus nostrum nulla, reiciendis dicta beatae officia ipsum! Ullam facilis, pariatur
+        impedit enim, aspernatur corrupti tempora, et doloribus adipisci neque itaque. Excepturi laboriosam quo, ex
+        explicabo animi, labore dolores commodi maxime soluta quidem eum, iste rem odio autem nam adipisci voluptas.
+        Voluptatibus sed molestiae officiis? Itaque adipisci quam labore minima consequatur ab maiores inventore cumque
+        exercitationem, in nostrum placeat esse. Perferendis amet sequi est libero corrupti eligendi ipsam laudantium
+        quam odio iusto nostrum culpa eaque fugiat doloremque cupiditate nihil distinctio, ex provident molestias fugit!
+        Ducimus eligendi explicabo dolorem adipisci mollitia consequatur iste facere officia perspiciatis, reiciendis
+        dicta sequi obcaecati iusto quas nulla sint. Laboriosam, distinctio obcaecati? Adipisci sunt eius vel distinctio
+        dolores? Reiciendis omnis debitis doloremque tempore ratione minima quisquam unde fugit facilis, amet at,
+        voluptate quam saepe placeat illo voluptatem quidem harum culpa. Neque earum doloribus error nemo facere non
+        ducimus repudiandae corporis iusto cumque deleniti nobis sint a praesentium tempore, consequuntur animi quisquam
+        commodi architecto amet fugit. Saepe, inventore magnam. Laudantium sed ad quidem tempora rem ratione doloremque
+        corrupti eaque, quo officiis porro nostrum dolor aut architecto sequi optio. Explicabo autem pariatur reiciendis
+        tempora, perferendis odit quis distinctio reprehenderit necessitatibus, exercitationem expedita dolores eaque,
+        accusamus nobis perspiciatis! Culpa iste, maxime a cum error omnis ratione harum est aspernatur recusandae
+        explicabo dignissimos ducimus molestiae doloremque vitae mollitia laboriosam dolorem cumque ut ea adipisci
+        distinctio voluptatibus ipsum. Error temporibus culpa voluptas quibusdam hic ab accusamus eum at magni veniam
+        numquam sequi, pariatur minus ex voluptatibus? Quasi error quaerat similique ipsa aliquid quidem impedit itaque
+        ipsam doloribus, architecto praesentium possimus aperiam dolor consequatur eum. Beatae dicta nostrum laboriosam?
+        Sit ea similique culpa. Sed cumque natus autem nisi. Non dignissimos aliquid quisquam. Ipsum laboriosam minima
+        beatae repellendus expedita voluptatem quaerat maxime enim officiis sint mollitia, neque doloribus repudiandae
+        fugiat tenetur cum vero corrupti similique non? Aspernatur possimus qui natus, beatae reiciendis dolorum
+        repudiandae dolores suscipit quam quibusdam perferendis ut, sint laborum eum laboriosam quae officiis impedit
+        quidem tempora nihil sapiente voluptatum voluptas esse. Dignissimos, amet ipsa alias voluptas odio dicta quas
+        saepe neque ex modi incidunt repellat soluta aspernatur accusamus, perspiciatis delectus aliquid quidem
+        reiciendis! Earum corrupti ut veritatis quae laboriosam excepturi repudiandae voluptatibus iusto, dolorum in
+        dolore, sint laudantium voluptate voluptas sed, ratione odit quisquam suscipit rem neque ipsam nulla deserunt!
+        Error recusandae qui cumque, maiores dicta soluta dolor eius ut hic nobis facere veritatis sed ab vel ex dolore
+        quod dolorem, tenetur, voluptatibus ad voluptatem velit praesentium consequuntur labore. Ut accusamus quibusdam,
+        tempora enim laudantium maxime ullam vitae officiis? Quam quasi labore cum, iusto rem voluptate eos natus
+        placeat eaque, dolorem, repellendus odio dolor! Quaerat, labore culpa eum ducimus est quod explicabo ipsam nulla
+        debitis. Mollitia, maiores. Odio, non aliquam voluptate iste mollitia dicta delectus, aperiam accusamus
+        quibusdam distinctio repudiandae voluptas ducimus, iure reprehenderit. Ratione natus voluptatibus culpa, ut,
+        assumenda velit officia veritatis ab exercitationem facilis corporis nisi saepe. Ex, obcaecati.</p> -->
+</body>
+
+</html>

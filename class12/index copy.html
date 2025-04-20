@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Understanding min-width</title>
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .explanation h2,
+        .example h2 {
+            color: #2c3e50;
+            margin-top: 20px;
+        }
+
+        .example-box {
+            min-width: 300px;
+            background-color: #4caf50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin: 10px 0;
+            transition: all 0.3s ease;
+        }
+
+        pre {
+            background-color: #eee;
+            padding: 10px;
+            overflow-x: auto;
+            border-left: 4px solid #4caf50;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>CSS <code>min-width</code> Explained</h1>
+        </header>
+
+        <section class="explanation">
+            <h2>What is <code>min-width</code>?</h2>
+            <p>
+                The <code>min-width</code> property in CSS sets the minimum width of an element.
+                It prevents the element from becoming narrower than the specified value, even when
+                the parent container is resized.
+            </p>
+        </section>
+
+        <section class="example">
+            <h2>Example</h2>
+            <div class="example-box">
+                Resize the window to see how this box respects <code>min-width</code>!
+            </div>
+            <pre>
+.example-box {
+  min-width: 300px;
+  background-color: #4caf50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+      </pre>
+        </section>
+
+        <footer>
+            <p>Try resizing your browser window to see <code>min-width</code> in action.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

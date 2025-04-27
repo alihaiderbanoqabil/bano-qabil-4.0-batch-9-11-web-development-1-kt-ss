@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 13 (Class 7 of CSS)</title>
+    <style>
+        h1 {
+            opacity: 0.5;
+        }
+
+        /* 
+        p {
+            line-height: 10;
+            word-spacing: 30px;
+            letter-spacing: 20px;
+            background-color: yellow;
+        } */
+
+        /* section p{
+            background-color: lightblue;
+            border: 1px solid red;
+        } */
+        section>p {
+            background-color: lightblue;
+            border: 1px solid red;
+        }
+
+        ul {
+            list-style: none;
+            list-style: lower-roman;
+            list-style: lower-alpha;
+        }
+
+        /* elment-name::after{
+
+        }
+        here id-name is a placeholder you can write here your own id-name 
+        #id-name::after{
+
+        }
+        here class-name is a placeholder you can write here your own class-name 
+        .class-name::after{
+
+        } */
+
+        li::before {
+            content: "Before content";
+        }
+
+        li::after {
+            content: "After content";
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            font-size: 20px;
+            border-radius: 10px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: red;
+            color: white;
+            font-size: 20px;
+            border-radius: 10px;
+            width: 200px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <button>Submit</button>
+    <ul>
+        <li>Mango</li>
+        <li>Apple</li>
+    </ul>
+    <h1>Class 13 (Class 7 of CSS)</h1>
+    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis sint, cum ipsum, ipsa fugit quisquam enim atque
+        dicta debitis, pariatur dolore. Consectetur id tempore praesentium itaque magni quod voluptas libero.</p>
+
+    <section>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi alias magnam, ducimus ullam sapiente neque
+            nulla delectus illum dolorum eos, odit officia aliquid totam autem magni fugit voluptates porro dolorem?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi alias magnam, ducimus ullam sapiente neque
+            nulla delectus illum dolorum eos, odit officia aliquid totam autem magni fugit voluptates porro dolorem?</p>
+
+        <article>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste dicta quis accusantium aut quaerat?
+                Recusandae quas nobis tempore possimus delectus aperiam reprehenderit ducimus cum quos a perspiciatis
+                accusamus, sunt omnis!</p>
+        </article>
+    </section> -->
+</body>
+
+</html>

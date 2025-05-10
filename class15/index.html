@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 15 (Class 9 of CSS)</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -8px;
+        }
+
+        .col {
+            padding: 8px;
+            background: #3498db;
+            color: white;
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        /* Column widths (out of 12) */
+        .col-1 {
+            flex: 0 0 8.333%;
+            max-width: 8.333%;
+        }
+
+        .col-2 {
+            flex: 0 0 16.666%;
+            max-width: 16.666%;
+        }
+
+        .col-3 {
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+
+        .col-4 {
+            flex: 0 0 33.333%;
+            max-width: 33.333%;
+        }
+
+        .col-5 {
+            flex: 0 0 41.666%;
+            max-width: 41.666%;
+        }
+
+        .col-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+
+        .col-7 {
+            flex: 0 0 58.333%;
+            max-width: 58.333%;
+        }
+
+        .col-8 {
+            flex: 0 0 66.666%;
+            max-width: 66.666%;
+        }
+
+        .col-9 {
+            flex: 0 0 75%;
+            max-width: 75%;
+        }
+
+        .col-10 {
+            flex: 0 0 83.333%;
+            max-width: 83.333%;
+        }
+
+        .col-11 {
+            flex: 0 0 91.666%;
+            max-width: 91.666%;
+        }
+
+        .col-12 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        h1 {
+            font-size: 10rem;
+            color: #3498db;
+        }
+
+        p {
+            font-size: 2rem;
+            color: #3cb514;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 5rem;
+                color: aqua;
+            }
+
+            p {
+                font-size: 1.5rem;
+                color: #d55bd3;
+            }
+        }
+
+        /* @media (max-width: 992px) {
+            h1 {
+                font-size: 5rem;
+                color: rgb(123, 255, 0);
+                font-weight: bolder;
+            }
+
+            p {
+                font-size: 1.5rem;
+                color: #e0b92b;
+                font-weight: bolder;
+            }
+        } */
+
+        /* @media (max-width: 992px) and (min-width: 769px) {  */
+        @media (769px <=width <=992px) {
+            h1 {
+                font-size: 5rem;
+                color: rgb(255, 0, 0);
+                font-weight: bolder;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            p {
+                font-size: 1.5rem;
+                color: rgb(255, 0, 0);
+                font-weight: bolder;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+            }
+        }
+
+        /* Responsive example (like .col-md-6) */
+        /* @media (max-width: 768px) {
+            .col {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        } */
+
+        /* body {
+            background-color: rgb(239, 17, 17);
+        }
+
+        .flex-container {
+            display: flex;
+            align-items: stretch;
+            gap: 1rem;
+            gap: 1rem 5rem;
+            row-gap: 1rem;
+            column-gap: 5rem;
+            flex-wrap: wrap;
+            background-color: #f1f1f1;
+        }
+
+        .flex-container>div {
+            background-color: DodgerBlue;
+            color: white;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+
+        @media screen and (max-width: 480px) {
+            body {
+                background-color: lightgreen;
+            }
+        } */
+
+        /* 
+        @media screen and (min-width: 768px) {
+            body {
+                background-color: lightblue;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            body {
+                background-color: lightpink;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            body {
+                background-color: lightyellow;
+            }
+        }
+
+        @media screen and (min-width: 1400px) {
+            body {
+                background-color: lightgray;
+            }
+        } */
+
+
+        .container {
+            display: grid;
+            /* grid-template-columns: auto auto auto auto auto;
+            grid-template-columns: repeat(auto, 5);
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-columns: repeat(1fr, 5); */
+            grid-template-columns: 1fr 3fr 1fr;
+            grid-template-rows: 2fr 4fr 6fr;
+            
+            gap: 1rem;
+            background-color: dodgerblue;
+            padding: 10px;
+        }
+
+        .container>div {
+            background-color: #f1f1f1;
+            border: 1px solid black;
+            padding: 10px;
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <sectiuon class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </sectiuon>
+
+    <!-- <h1>hello world</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt necessitatibus dolorum voluptatem soluta incidunt
+        beatae quis modi, aut animi eveniet? Nam labore sint architecto animi quae reiciendis commodi, autem laboriosam!
+    </p> -->
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col col-6">Column 1 (6/12)</div>
+            <div class="col col-6">Column 2 (6/12)</div>
+        </div>
+        <div class="row">
+            <div class="col col-4">Column 1 (4/12)</div>
+            <div class="col col-4">Column 2 (4/12)</div>
+            <div class="col col-4">Column 3 (4/12)</div>
+        </div>
+    </div> -->
+    <!-- <h1>Class 15 (Class 9 of CSS)</h1>
+    <div class="flex-container">
+        <div style="flex-grow: 1">1</div>
+        <div style="flex-grow: 4">2</div>
+        <div style="flex-grow: 8">3</div>
+       
+    </div> -->
+</body>
+
+</html>

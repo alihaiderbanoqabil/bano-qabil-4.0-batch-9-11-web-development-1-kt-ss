@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .todo-container {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input[type="text"] {
+            width: 75%;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        li.completed {
+            text-decoration: line-through;
+            color: #888;
+        }
+
+        .delete-btn {
+            color: red;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="todo-container">
+        <h2>My To-Do List</h2>
+        <input type="text" id="todo-input" placeholder="Add a new task...">
+        <button onclick="addTodo()">Add</button>
+        <ul id="todo-list"></ul>
+    </div>
+
+    <script>
+        let todos = JSON.parse(localStorage.getItem("todos")) || [];
+
+        function renderTodos() {
+            const list = document.getElementById("todo-list");
+            list.innerHTML = "";
+
+            todos.forEach((todo, index) => {
+                const li = document.createElement("li");
+                li.textContent = todo.text;
+                li.className = todo.completed ? "completed" : "";
+
+                // Toggle completion
+                li.onclick = () => {
+                    todos[index].completed = !todos[index].completed;
+                    saveTodos();
+                    renderTodos();
+                };
+
+                // Delete button
+                const delBtn = document.createElement("button");
+                delBtn.textContent = "✖";
+                delBtn.className = "delete-btn";
+                delBtn.onclick = (e) => {
+                    e.stopPropagation(); // Prevent toggle on delete
+                    todos.splice(index, 1);
+                    saveTodos();
+                    renderTodos();
+                };
+
+                li.appendChild(delBtn);
+                list.appendChild(li);
+            });
+        }
+
+        function addTodo() {
+            const input = document.getElementById("todo-input");
+            const text = input.value.trim();
+            if (text) {
+                todos.push({ text, completed: false });
+                input.value = "";
+                saveTodos();
+                renderTodos();
+            }
+        }
+
+        function saveTodos() {
+            localStorage.setItem("todos", JSON.stringify(todos));
+        }
+
+        // Initial render
+        renderTodos();
+    </script>
+
+</body>
+
+</html>

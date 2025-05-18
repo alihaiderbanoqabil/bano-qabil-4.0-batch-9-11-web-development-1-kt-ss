@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 18 (Class 3 of JS)</title>
+</head>
+
+<body>
+    <h1>Class 18 (Class 3 of JS)</h1>
+    <script>
+        console.log(`Class 3 of JS`);
+        // string literal 
+        // let a, b;
+        // a = 10;
+        // b = 20;
+        let age = 30, classNo = 17; // number variable
+        // let age = 30;
+        // let classNo = 17; // number variable
+        let name = "Ali Haider"; // string variable
+        // let fullName = 'Ali Haider kldhslkhfldshgkjfhdskjfhkjdshfkjds
+        // kdfhkjdshgkjfhdskjfgkjdsgfdsfsdkfjdsl
+        // dshfkjhskjfhdskjhfkjdshfkjhdskjfhkjdshf
+        // kjdshfkjdhskjhfkjdshfkjhdskjfh'; // string variable
+
+        // let fullName = `Ali Haider kldhslkhfldshgkjfhdskjfhkjdshfkjds
+        // kdfhkjdshgkjfhdskjfgkjdsgfdsfsdkfjdsl
+        // dshfkjhskjfhdskjhfkjdshfkjhdskjfhkjdshf
+        // kjdshfkjdhskjhfkjdshfkjhdskjfh`; // string variable
+        // console.log(fullName, 'fullName');
+        // console.log('My name is ' + name + ' and I am ' + age + ' years old.');
+        // console.log(`My name is ${name} and I am ${age} years old.`);
+
+        let myage = undefined; // dont do this 
+
+        // console.log(myage, 'myage');
+
+        let studentInfo = null;
+        // console.log(studentInfo, 'studentInfo');
+
+
+        // const studentName = "Ali Haider";
+        // const studentAge = 30;
+        // const studentClassNo = 17;
+        // const studentIsStudent = true;  
+        // const studentSubjects = ['Math', 'Science', 'English'];
+        // const studentAddress = {
+        //     city: "Karachi",
+        //     country: "Pakistan"
+        // };
+
+        // const studentName = "Ali Haider";
+        // const studentAge = 30;
+        // const studentClassNo = 17;
+        // const studentIsStudent = true;  
+        // const studentSubjects = ['Math', 'Science', 'English'];
+        // const studentAddress = {
+        //     city: "Karachi",
+        //     country: "Pakistan"
+        // };
+        const studentInformation = {
+            name: "Ali Haider",
+            "full name": "Ali Haider",
+            age: 30,
+            classNo: 17,
+            isStudent: true,
+            subjects: ['Math', 'Science', 'English'],
+            address: {
+                city: "Karachi",
+                country: "Pakistan"
+            },
+            greet: function () {
+                console.log("Hello!");
+            }
+        };
+        
+        console.log(studentInformation, 'studentInformation 1');
+        studentInformation.name = "Hasnain";
+        studentInformation.address.city = "Pindi";
+        studentInformation.age = 36;
+        delete studentInformation.isStudent;
+        delete studentInformation.address.country;
+        console.log(studentInformation, 'studentInformation 2');
+        // console.log(studentInformation.name, 'studentInformation.name');
+        // console.log(studentInformation["full name"], 'studentInformation.name');
+        // console.log(studentInformation.address.country, 'studentInformation.name');
+        // console.log(studentInformation["address"]["city"], 'studentInformation.name');
+
+
+        // create an object for product
+        const product1 = {
+            name: "Dell Laptop",
+            price: 1000,
+            quantity: 50,
+            brand: "Dell",
+            category: "Electronics",
+            specifications: {
+                processor: "Intel i7",
+                ram: "16GB",
+                storage: "512GB SSD"
+            },
+            ratings: [4, 5, 3, 4.6, 5],
+            // reviews: [
+            //     { user: "John", rating: 5, comment: "Great product!" },
+            //     { user: "Jane", rating: 4, comment: "Good value for money." }
+            // ]
+        };
+
+        const product2 = {
+            name: "Dell Laptop hjhj",
+            price: 1000,
+            quantity: 50,
+            brand: "Dell",
+            category: "Fashion",
+            specifications: {
+                processor: "Intel i7",
+                ram: "16GB",
+                storage: "512GB SSD"
+            },
+            ratings: [4, 5, 3, 4.6, 5],
+            // reviews: [
+            //     { user: "John", rating: 5, comment: "Great product!" },
+            //     { user: "Jane", rating: 4, comment: "Good value for money." }
+            // ]
+        };
+
+        // const mark1 = 90;
+        // const mark2 = 90;
+        // const mark3 = 90;
+        // const mark4 = 90;
+        // const studentMarks = [93, 92, 91, 90, 89, 88, 87];
+
+        // const studentsMarks = [
+        //     { subject: "Math", marks: 85, name: 'ali', id: 1 },
+        //     { subject: "Science", marks: 90, name: 'ali', id: 1 },
+        //     { subject: "English", marks: 88, name: 'ali', id: 1 },
+        //     { subject: "Math", marks: 85, name: 'ali', id: 2 },
+        //     { subject: "Science", marks: 90, name: 'ali', id: 2 },
+        //     { subject: "English", marks: 88, name: 'ali', id: 2 },
+        //     { subject: "Math", marks: 85, name: 'hasnain', id: 3 },
+        //     { subject: "Science", marks: 90, name: 'hasnain', id: 3 },
+        //     { subject: "English", marks: 88, name: 'hasnain', id: 3 },
+        // ]
+
+        let fruits = ["apple", "banana", "cherry", 'kiwi', 'mango', 'orange', 'grape', 'watermelon', 'peach', 'pear', 'plum', 'kiwi', 'papaya', 'pineapple', 'blueberry', 'strawberry'];
+        console.log(fruits, 'fruits');
+        // console.log(fruits[0], 'fruits');
+        // console.log(fruits[1], 'fruits');
+        // console.log(fruits[fruits.length - 1], 'fruits');
+        // console.log(fruits.length, 'length');
+
+        // console.log(studentInformation, 'studentInformation');
+        // console.log(studentInformation.name, 'studentInformation.name');
+        // console.log(studentInformation.age, 'studentInformation.age');
+        // console.log(studentInformation.classNo, 'studentInformation.classNo');
+        // console.log(studentInformation.isStudent, 'studentInformation.isStudent');
+        // console.log(studentInformation.subjects, 'studentInformation.subjects');
+        // console.log(studentInformation.address, 'studentInformation.address');
+        // console.log(studentInformation.address.city, 'studentInformation.address.city');
+        // console.log(studentInformation.address.country, 'studentInformation.address.country');
+    </script>
+</body>
+
+</html>

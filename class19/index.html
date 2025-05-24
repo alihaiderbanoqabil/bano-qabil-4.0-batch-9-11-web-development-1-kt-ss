@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 19 (Class 4 of JS)</title>
+</head>
+
+<body>
+    <h1>Class 19 (Class 4 of JS)</h1>
+    <script>
+        // 1. typeof operator 
+        // 2. deep vs shallow copy 
+        // 3. primitive vs non primitive data types
+        // 4. operators in JS 
+        // 5. type casting/type conversion
+
+        let name = "Ali Haider";
+        let fullName = name;
+        fullName = "Hasnain";
+        // console.log(name, 'name');
+        // console.log(fullName, 'fullName');
+
+
+        //   const subjects= ['Math', 'Science', 'English'];
+        //   console.log(subjects, 'subjects');
+        //   console.log(subjects[2], 'subjects');
+        //   subjects[2] = "Urdu";
+        //   subjects[1] = "PST";
+        //   delete subjects[2];
+        //   console.log(subjects, 'subjects');
+
+        const studentInformation = {
+            name: "Ali Haider",
+            "full name": "Ali Haider",
+            age: 30,
+            classNo: 17,
+            isStudent: true,
+            subjects: ['Math', 'Science', 'English'],
+            address: {
+                city: "Karachi",
+                country: "Pakistan"
+            }
+        };
+
+        const subjects = ['Math', 'Science', 'English'];
+        const copiedSubjects = subjects; // Shallow copy
+        copiedSubjects[0] = "Urdu";
+        // console.log(subjects, 'subjects');
+        // console.log(copiedSubjects, 'copiedSubjects');
+
+        const _name = "Ali Haider";
+        const age = 30;
+        const isStudent = true;
+        const student = {
+            name: _name,
+            age: age,
+            isStudent: isStudent
+        };
+        // console.log(_name, 'name');
+        // console.log(typeof _name, 'name');
+        // console.log(age, 'age');
+        // console.log(typeof age, 'age');
+        // console.log(isStudent, 'isStudent');
+        // console.log(typeof isStudent, 'isStudent');
+        // console.log(student, 'student');
+        // console.log(typeof student, 'student');
+        // console.log(subjects, 'subjects');
+        // console.log(typeof subjects, 'subjects');
+
+        // const jsonObject = JSON.stringify(studentInformation);
+        // const nativeObject = JSON.parse(jsonObject);
+        // console.log(JSON.parse('{"name":"Ali Haider","age":30,"isStudent":true}'), 'JSON.parse');
+
+        const deepCopyStudentInformation = structuredClone(studentInformation);
+        // const deepCopyStudentInformation = JSON.parse(JSON.stringify(studentInformation));
+        deepCopyStudentInformation.name = "Hasnain";
+        deepCopyStudentInformation.address.city = "Pindi";
+        deepCopyStudentInformation.age = 36;
+        delete deepCopyStudentInformation.isStudent;
+        delete deepCopyStudentInformation.address.country;
+        deepCopyStudentInformation.subjects[0] = "Urdu";
+        deepCopyStudentInformation.subjects[1] = "PST";
+        // console.log(studentInformation, 'studentInformation');
+        // console.log(deepCopyStudentInformation, 'deepCopyStudentInformation');
+
+        // console.log(studentInformation,  'studentInformation');
+        // console.log(deepCopyStudentInformation,  'deepCopyStudentInformation');
+        // console.log(jsonObject,  'jsonObject');
+        // console.log(nativeObject,  'nativeObject');
+        // console.log(jsonObject.toUpperCase(), 'jsonObject');
+        // console.log(typeof jsonObject, 'jsonObject');
+        // console.log(Object.keys(jsonObject), 'jsonObject');
+        // console.log(Object.keys(studentInformation), 'studentInformation');
+        // console.log( studentInformation, 'studentInformation');
+        // console.log(typeof studentInformation, 'studentInformation');
+        // let copiedStudentInformation = studentInformation; // Shallow copy
+        // copiedStudentInformation.name = "Hasnain";
+        // copiedStudentInformation.address = "House no 32";
+        // console.log(studentInformation, 'studentInformation');
+        // console.log(copiedStudentInformation, 'copiedStudentInformation');
+
+        // console.log(studentInformation, 'studentInformation 1');
+        // studentInformation.name = "Hasnain";
+        // studentInformation.address.city = "Pindi";
+        // studentInformation.age = 36;
+        // delete studentInformation.isStudent;
+        // delete studentInformation.address.country;
+        // console.log(studentInformation, 'studentInformation 2');
+
+
+        // type casting/type converison 
+
+        // console.log("ali" + 30);
+        // console.log(Number("30.67"));
+        // console.log(Number("30.67") + Number("30"));
+        // console.log("ali" - 30);
+        // console.log("30" - 30);
+        // const string = String(age);
+        // console.log(age, 'age', typeof age);
+        // console.log(string, 'string', typeof string);
+
+        // const str = 'true'; 
+        // const bool = Boolean(str); 
+        // console.log(str, 'str', typeof str);
+        // console.log(bool, 'bool', typeof bool);
+
+        // const string = "50.80";
+        // const number = parseInt(string);
+        // console.log(string, 'string', typeof string);
+        // console.log(number, 'number', typeof number);
+
+        // const string = "50.80097097";
+        // const number = parseFloat(string);
+        // console.log(string, 'string', typeof string);
+        // console.log(number, 'number', typeof number);
+        // operators in JS 
+        // const a = 2;
+        // const b = 3;
+        // console.log(a, 'a');
+        // console.log(b, 'b');
+        // console.log(a + b, 'a + b');
+        // console.log(a - b, 'a - b');
+        // console.log(a * b, 'a * b');
+        // console.log(a / b, 'a / b');
+        // console.log(a % b, 'a % b');
+        // console.log(Math.random(), 'a ** b'); // Exponentiation
+        // console.log(Math.pow(2, 3), 'a ** b'); // Exponentiation
+        // console.log(a ** b, 'a ** b'); // Exponentiation
+        // console.log(a++ + b, 'a++ + b'); // Postfix increment
+        // console.log(a, 'a after a++');
+        // console.log(++a + b, '++a + b'); // Prefix increment
+        // console.log(a, 'a after ++a');
+        // console.log(a-- + b, 'a-- + b'); // Postfix decrement
+        // console.log(a, 'a after a--');
+        // console.log(--a + b, '--a + b'); // Prefix decrement
+        let a = 2;
+        let b = 3;
+        console.log(a, 'a');
+        console.log(b, 'b');
+        a = a + 1;
+        a = a +  4;
+        // OR 
+        a += 4;
+        console.log(a, 'a after a + 1');
+        // a--;
+        // console.log(a, 'a after a + 1');
+          
+        // a++;
+        
+        // a++;
+        // a++;
+        // a++;
+        // a++;
+        // a++;
+        // console.log(a, 'a after a++');
+        // console.log(++a);
+
+// console.log(30 == 20);        // false
+// console.log("30" == 30);      // true (loose equality, type coercion)
+// console.log("ali" == 30);     // false
+// console.log("30" === 30);     // false (strict equality, no type coercion)
+
+
+// console.log("30" != 20);        // true  -> "30" is not equal to 20
+// console.log("30" != 30);        // false -> "30" == 30 is true, so != is false (type is coerced)
+// console.log("30" !== 30);       // true  -> different types: string !== number
+// console.log("30" !== "30");     // false -> both value and type are equal (string === string)
+
+    </script>
+</body>
+
+</html>

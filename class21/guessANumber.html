@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Guess the Number</title>
+</head>
+
+<body>
+    <h1>Guess the Number!</h1>
+    <p>I'm thinking of a number between 1 and 100.</p>
+    <input type="number" id="guessInput" placeholder="Enter your guess" />
+    <button onclick="checkGuess()">Guess</button>
+    <p id="message"></p>
+
+    <script>
+        const secretNumber = Math.floor(Math.random() * 100) + 1;
+        console.log(`Secret Number: ${secretNumber}`, Math.random()); // For debugging purposes
+
+        let attempts = 0;
+        function checkGuess() {
+            const guess = Number(document.getElementById("guessInput").value);
+            console.log(guess, 'guess 2');
+
+            const message = document.getElementById("message");
+            attempts++;
+
+            if (!guess || guess < 1 || guess > 100) {
+                message.textContent = "Please enter a number between 1 and 100.";
+            } else if (guess === secretNumber) {
+                message.textContent = `🎉 Correct! You guessed it in ${attempts} tries.`;
+            } else if (guess < secretNumber) {
+                message.textContent = "Too low! Try again.";
+            } else {
+                message.textContent = "Too high! Try again.";
+            }
+        }
+
+
+
+        // // Generate a random number between 1 and 100
+        // const secretNumber = Math.floor(Math.random() * 100) + 1;
+
+        // let guess;
+        // let attempts = 0;
+
+        // while (guess !== secretNumber) {
+        //     guess = parseInt(prompt("Guess a number between 1 and 100:"));
+        //     attempts++;
+
+        //     if (isNaN(guess)) {
+        //         alert("That's not a valid number!");
+        //     } else if (guess < secretNumber) {
+        //         alert("Too low! Try again.");
+        //     } else if (guess > secretNumber) {
+        //         alert("Too high! Try again.");
+        //     } else {
+        //         alert(`🎉 Correct! You guessed it in ${attempts} attempts.`);
+        //     }
+        // }
+
+        // alert("hello this is our 5th class of ja");
+        // console.log('hello' / 40)
+        // const input = parseInt(prompt("Guess a number between 1 and 100:"), 10)
+        // console.log(`Input: ${input}`, isNaN(input), typeof input);
+
+    </script>
+</body>
+
+</html>

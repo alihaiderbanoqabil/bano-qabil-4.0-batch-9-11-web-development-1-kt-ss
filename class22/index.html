@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 22 (Class 6 of JS)</title>
+</head>
+
+<body>
+    <h1>Class 22 (Class 6 of JS)</h1>
+
+    <button onclick="resetInterval()">Reset Interval</button>
+    <button onclick="resetTimeout()">Reset Timeout</button>
+    <script>
+        // functions in JS 
+
+        // reguler function in js 
+        function addTwoNumbers1(num1 = 20, num2 = 10) {
+            const sum = num1 + num2;
+            return sum;
+        }
+        // console.log("Sum 1:", addTwoNumbers1(10, 40));
+        // document.write("Sum 2:", addTwoNumbers1(10, 100));
+
+        //  fat arrow / arrow function in js 
+        const addTwoNumbers2 = (num1 = 20, num2 = 10) => {
+            const sum = num1 + num2;
+            return sum;
+        }
+        // console.log("Sum 3:", addTwoNumbers2(100, 40));
+        // const greet = (name = 'Ali', age = 26, isTeacher, hobbies, info) => {
+        //     console.log(`Name: ${name}, Age: ${age}, Is Teacher: ${isTeacher}, Hobbies: ${hobbies}, Info: ${JSON.stringify(info)}`);
+        //     //  console.log(`Name: ${name}, Age: ${age}, Is Teacher: ${isTeacher}, Hobbies: ${hobbies}, Info: ${info}`, info);
+
+        //     // console.log(`Hello ${name}, you are ${age} years old.`);
+        // }
+
+        // greet("Ali", 30);
+        // greet("hasnain", 70);
+        // greet(50, 'Ali');
+        // greet("Usman", 24, true, ["reading", "coding"], { city: "Karachi", gender: 'male', country: 'Pakistan' });
+
+        const greet = ({ name = 'Ali', age = 26, isTeacher, hobbies, info }) => {
+            console.log(`Name: ${name}, Age: ${age}, Is Teacher: ${isTeacher}, Hobbies: ${hobbies}, Info: ${JSON.stringify(info)}`);
+            //  console.log(`Name: ${name}, Age: ${age}, Is Teacher: ${isTeacher}, Hobbies: ${hobbies}, Info: ${info}`, info);
+
+            // console.log(`Hello ${name}, you are ${age} years old.`);
+        }
+
+        // greet({
+        //     age: 30,
+        //     info: { city: "Karachi", gender: 'male', country: 'Pakistan' },
+        //     name: "Ali",
+        //     hobbies: ["reading", "coding"],
+        //     isTeacher: true,
+        // });
+
+
+        const addTwoNumbers3 = function (num1 = 20, num2 = 10) {
+            const sum = num1 + num2;
+            return sum;
+        }
+        // console.log("Sum 4:", addTwoNumbers3(100, 40));
+
+
+        const addTwoNumbers4 = (num1 = 20, num2 = 10) => {
+            const sum = num1 + num2;
+            return sum;
+        }
+
+        // console.log("Sum 5:", addTwoNumbers4(100, 60));
+
+        function sub(n1, n2) {
+            return n1 - n2;
+        }
+
+        // const subtract = (n1, n2) => {
+        //     return n1 - n2;
+        // }
+
+        // const subtract = (n1, n2) => n1 - n2
+        // console.log("Subtraction:", subtract(100, 60));
+
+        // const multiply = (n1, n2) => {
+        //     return n1 * n2;
+        // }
+
+        // const multiply = (n1, n2, n3) => n1 * n2 * n3
+        // console.log("Multiplication:", multiply(10, 20, 30));
+
+        // if single line of code 
+        const age = 40;
+        // if (age > 20) {
+        //     console.log("You are older than 20");
+        // } else {
+        //     console.log("You are younger than 20");
+        // }
+
+        //  OR
+
+        // if (age > 20) console.log("You are older than 20")
+        // else console.log("You are younger than 20")
+        // checkArguments1(10, 20, 30);
+
+        // function checkArguments1(a1, a2, a3) {
+        //     console.log(`Arguments: ${a1}, ${a2}, ${a3}`);
+        //     console.log(`Number of arguments`, arguments);
+        // }
+
+        // checkArguments2(10, 20, 30);
+        // const checkArguments2 = (a1, a2, a3) => {
+        //     console.log(`Arguments: ${a1}, ${a2}, ${a3}`);
+        //     console.log(`Number of arguments`, arguments);
+        // }
+        // checkArguments1(10, 20, 30);
+        // checkArguments2(10, 20, 30);
+        // function sumOfNNumbers() {
+        //     let sum = 0;
+        //     console.log('arguments', arguments);
+
+        //     for (let i = 0; i < arguments.length; i++) {
+        //         // sum += arguments[i];
+        //         console.log(arguments[i], 'arguments[i]');
+        //         sum = sum + arguments[i];
+        //     }
+        //     return sum;
+        // }
+        // function multipleOfNNumbers() {
+        //     let mutiple = 1;
+        //     console.log('arguments', arguments);
+
+        //     for (let i = 0; i < arguments.length; i++) {
+        //         // mutiple += arguments[i];
+        //         console.log(arguments[i], 'arguments[i]');
+        //         mutiple = mutiple * arguments[i];
+        //     }
+        //     return mutiple;
+        // }
+        // console.log(sumOfNNumbers(10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200), 'sumOfNNumbers');
+        // console.log(multipleOfNNumbers(10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200), 'multipleOfNNumbers');
+
+        // console.log(name, 'name in global scope');
+
+        // var name = "Ali";
+
+        // console.log(fullName, 'fullName');
+
+        // const fullName = 'Ali Haider';
+
+
+        // intervals in js 
+
+        console.log(window, 'window');
+        // window.alert("Hello World");
+        // // OR 
+        // alert("Hello World");
+
+        // console.log(document, 'document');
+        // // OR 
+        // console.log(window.document, 'window.document');
+
+        // const info = {
+        //     name: "Ali",
+        //     age: 30,
+        //     isTeacher: true,
+        //     hobbies: ["reading", "coding"],
+        //     address: {
+        //         city: "Karachi",
+        //         country: "Pakistan"
+        //     }, 
+        //  // here greet is method not a function 
+        // greet: function () {
+        //         console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+        //     }
+        // };
+
+        // Asynchronous programming in JS
+
+        // let index = 0;
+        // setInterval(() => {
+        //     console.log("This will run every second using arrow function", index);
+        //     index++;
+        // }, 1000);
+        // account creation  u1 8 1m
+        // post create u2 100 1.5m 2.5m
+        // post like u3 150  0.5m 3m
+        // console.log("Before interval");
+
+        // let index = 0;
+        // setInterval(function () {
+        //     console.log("This will run every second using function expression", index);
+        //     index++;
+        // }, 2000);
+
+        // let index = 0;
+        // setInterval(function () {
+        //     console.log("This will run every second using function expression", index);
+        //     index++;
+        // }, 0);
+
+
+        // let index = 0;
+        // const interval = setInterval(function () {
+        //     console.log("This will run every second using function expression", index);
+        //     index++;
+        // }, 1000);
+
+        // const resetInterval = () => {
+        //     clearInterval(interval);
+        //     console.log("Interval reset");
+        // }
+
+        // console.log("After interval");
+
+        // here timeout value will be in milliseconds
+        // console.log("Before timeout");
+
+        // const timeout = setTimeout(() => {
+        //     console.log("This will run after 3 seconds using arrow function");
+
+        // }, 5000);
+
+        // const resetTimeout = () => {
+        //     clearTimeout(timeout);
+        //     console.log("Timeout reset");
+        // }
+        // console.log("After timeout");
+
+        // setTimeout(function () {
+        //     console.log("This will run after 3 seconds using function expression");
+        // }, 3000);
+
+        // setTimeout(function () {
+        //     console.log("This will run after 3 seconds using function expression");
+        // }, 0);
+
+        // console.log("After timeout");
+
+        // local storage / session storage & cookies in js
+
+
+        localStorage.setItem("name", "Ali");
+        localStorage.setItem("age", 30);
+        localStorage.setItem("isTeacher", true);
+        localStorage.setItem("hobbies", JSON.stringify(["reading", "coding"]));
+        localStorage.setItem("info", JSON.stringify({ city: "Karachi", country: "Pakistan" }));
+        // localStorage.setItem("hobbies", ["reading", "coding"]);
+        // localStorage.setItem("hobbies", [{ city: "Karachi", country: "Pakistan" }, { city: "Karachi", country: "Pakistan" }]);
+        // localStorage.setItem("info", { city: "Karachi", country: "Pakistan" });
+
+        console.log(localStorage.getItem("name"));
+        // const _age = localStorage.getItem("age");
+        // console.log(_age, typeof _age, Number(_age), typeof Number(_age)); // "30" string
+        // console.log(localStorage.getItem("isTeacher"));
+        // console.log(localStorage.getItem("hobbies"));
+        // const info = localStorage.getItem("info");
+        // const parsedInfo = JSON.parse(info);
+        // console.log(parsedInfo.city, info.city);
+        // localStorage.removeItem("name");
+        // localStorage.removeItem("age");
+        // localStorage.clear()
+        console.log(localStorage.key(0));
+        console.log(localStorage.key(0));
+        console.log(localStorage.length);
+        
+
+
+         
+        // console.log(JSON.parse(localStorage.getItem("hobbies")));
+        // console.log(JSON.parse(localStorage.getItem("info")));
+        
+        
+        localStorage.getItem("age");
+        localStorage.getItem("isTeacher");
+        localStorage.getItem("hobbies");
+        localStorage.getItem("info");
+
+        // console.log(localStorage.getItem("name"), 'localStorage.getItem("name")');
+        // console.log(localStorage.getItem("age"), 'localStorage.getItem("age")');
+        // console.log(localStorage.getItem("isTeacher"), 'localStorage.getItem("isTeacher")');
+        // console.log(localStorage.getItem("hobbies"), 'localStorage.getItem("hobbies")');
+        // console.log(localStorage.getItem("info"), 'localStorage.getItem("info")');
+
+        // console.log(JSON.parse(localStorage.getItem("hobbies")), 'JSON.parse(localStorage.getItem("hobbies"))');
+        // console.log(JSON.parse(localStorage.getItem("info")), 'JSON.parse(localStorage.getItem("info"))');
+
+        // localStorage.removeItem('name');
+        // localStorage.clear();
+    </script>
+</body>
+
+</html>

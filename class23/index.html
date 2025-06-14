@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 23 (Class 7 of JS)</title>
+</head>
+
+<body>
+    <h1 id="heading1">Class 23 (Class 7 of JS)</h1>
+    <!-- <h1 id="heading1">Class 24 (Class 8 of JS)</h1> -->
+
+    <p class="paragraph1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam eius saepe ad perspiciatis
+        omnis ipsam qui, veniam fuga, incidunt voluptatem sequi facere nemo voluptates exercitationem voluptatum ipsa
+        repudiandae ipsum impedit! 1</p>
+    <p class="paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam eius saepe ad perspiciatis
+        omnis ipsam qui, veniam fuga, incidunt voluptatem sequi facere nemo voluptates exercitationem voluptatum ipsa
+        repudiandae ipsum impedit! 2</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam eius saepe ad perspiciatis
+        omnis ipsam qui, veniam fuga, incidunt voluptatem sequi facere nemo voluptates exercitationem voluptatum ipsa
+        repudiandae ipsum impedit! 3</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam eius saepe ad perspiciatis
+        omnis ipsam qui, veniam fuga, incidunt voluptatem sequi facere nemo voluptates exercitationem voluptatum ipsa
+        repudiandae ipsum impedit! 4</p>
+    <p class="paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam eius saepe ad perspiciatis
+        omnis ipsam qui, veniam fuga, incidunt voluptatem sequi facere nemo voluptates exercitationem voluptatum ipsa
+        repudiandae ipsum impedit! 5</p>
+    <div class="paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam eius saepe ad perspiciatis
+        omnis ipsam qui, veniam fuga, incidunt voluptatem sequi facere nemo voluptates exercitationem voluptatum ipsa
+        repudiandae ipsum impedit! 5
+        <p>This is a paragraph 1</p>
+        <section>
+            <p>This is a paragraph 2</p>
+        </section>
+    </div>
+
+    <h2>Course Registration Form</h2>
+    <form id="courseForm">
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <p>Select the courses you want to enroll in:</p>
+
+        <input type="checkbox" id="html" name="course" value="HTML">
+        <label for="html">HTML</label><br>
+
+        <input type="checkbox" id="css" name="course" value="CSS">
+        <label for="css">CSS</label><br>
+
+        <input type="checkbox" id="javascript" name="course" value="JavaScript">
+        <label for="javascript">JavaScript</label><br>
+
+        <input type="checkbox" id="python" name="course" value="Python">
+        <label for="python">Python</label><br>
+
+        <input type="checkbox" id="react" name="course" value="React">
+        <label for="react">React</label><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        // console.log(window, 'window');
+
+        // console.log(document.getElementById('heading1'));
+        // const paragraphs = document.getElementsByClassName('paragraph');
+        // const paragraphsArray = Array.from(paragraphs);
+        // console.log(paragraphs, 'paragraphs');
+        // // console.log(paragraphsArray, 'paragraphs');
+        // // const array = [1, 2, 3, 4, 5];
+        // // console.log(array, 'array');
+
+        // console.log(document.getElementsByTagName('p'));
+        // console.log(document.getElementsByName('course'), 'courses');
+
+
+        // console.log(document.querySelector('#heading1'));
+        // console.log(document.querySelector('.paragraph'));
+        // console.log(document.querySelector('div p'));
+        // console.log(document.querySelector('.paragraph p'));
+        // console.log(document.querySelectorAll('.paragraph > p'));
+        // console.log(document.querySelectorAll('.paragraph'));
+
+        const form = document.querySelector("form");
+        const h1 = document.querySelector('h1')
+
+        // console.log('form.textContent before', h1 && h1.textContent);
+        // console.log('form.textContent before', h1 && h1.textContent);
+        // console.log('form.textContent before', h1.textContent);
+        // h1.textContent = '<h5>Course Registration Form</h5>';
+
+
+        // if (h1?.textContent === `Class 23 (Class 7 of JS)`) {
+        //     // h1.style.color = 'red';
+        //     // h1.style.backgroundColor = 'yellow';
+        //     // h1.style.border = '5px solid green';
+        //     // for (let index = 0; index < 10; index++) {
+        //     //     h1.textContent = `Class 24 (Class 8 of JS) ${index}`;
+        //     // }
+        // }
+        // console.log('form.textContent after', h1.textContent);
+        // console.log('form.textContent before', form.textContent);
+        // console.log('form.innerHTML before', form.innerHTML);
+        // const concatInnerHTML = form.innerHTML + '<h1>Course Registration Form</h1>';
+        // form.innerHTML = concatInnerHTML;
+        // form.innerHTML =  form.innerHTML + '<b>Bold Text</b>'; ;
+        // console.log('concatInnerHTML', concatInnerHTML);
+        // // console.log('form', form);
+        // console.log('form.innerHTML after', form.innerHTML);
+        // // console.dir(form);
+
+
+    </script>
+    <script src="./asynchronous.js"></script>
+
+    <!-- <p class="paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam eius saepe ad perspiciatis
+        omnis ipsam qui, veniam fuga, incidunt voluptatem sequi facere nemo voluptates exercitationem voluptatum ipsa
+        repudiandae ipsum impedit! 5</p>
+
+        
+    <p class="paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam eius saepe ad perspiciatis
+        omnis ipsam qui, veniam fuga, incidunt voluptatem sequi facere nemo voluptates exercitationem voluptatum ipsa
+        repudiandae ipsum impedit! 5</p>
+        
+    <p class="paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam eius saepe ad perspiciatis
+        omnis ipsam qui, veniam fuga, incidunt voluptatem sequi facere nemo voluptates exercitationem voluptatum ipsa
+        repudiandae ipsum impedit! 5</p>
+        
+    <p class="paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam eius saepe ad perspiciatis
+        omnis ipsam qui, veniam fuga, incidunt voluptatem sequi facere nemo voluptates exercitationem voluptatum ipsa
+        repudiandae ipsum impedit! 5</p> -->
+</body>
+
+</html>

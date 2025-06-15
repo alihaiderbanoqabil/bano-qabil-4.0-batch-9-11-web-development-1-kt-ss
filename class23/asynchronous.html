@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Dynamic User List</title>
-    <style>
+    <!-- <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
@@ -20,6 +20,47 @@
 
         .user-card h3 {
             margin: 0 0 5px 0;
+        }
+
+        
+    </style> -->
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .user-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            padding: 20px;
+        }
+
+        .user-card h2 {
+            margin-top: 0;
+        }
+
+        .info {
+            margin: 10px 0;
+        }
+
+        .info strong {
+            display: inline-block;
+            width: 80px;
+        }
+
+        .section-title {
+            font-weight: bold;
+            margin-top: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
         }
     </style>
 </head>
@@ -270,16 +311,51 @@
                 const userList = document.getElementById('userList');
                 userList.innerHTML = ''; // Clear "Loading..." text
 
-                users.forEach(user => {
-                    const card = document.createElement('div');
-                    card.className = 'user-card';
-                    card.innerHTML = `
-            <h3>${user.name}</h3>
-            <p>Email: ${user.email}</p>
-            <p>Company: ${user.company.name}</p>
-          `;
-                    userList.appendChild(card);
-                });
+                //         users.forEach(user => {
+                //             const card = document.createElement('div');
+                //             card.className = 'user-card';
+                //             card.innerHTML = `
+                //     <h3>${user.name}</h3>
+                //     <p>Email: ${user.email}</p>
+                //     <p>Company: ${user.company.name}</p>
+                //   `;
+                //             userList.appendChild(card);
+                //         });
+                // console.log(users, 'users');
+                const usersCount = users.length;
+                // console.log(usersCount, 'usersCount');
+
+
+                for (let index = 0; index < usersCount; index++) {
+                    const user = users[index];
+                    // const div = document.createElement('div');
+                    // div.className = 'user-card'
+                    // console.log(user, 'user', div);
+                    const cardInnerHtml = `
+    <h2>${user.name}</h2>
+    <div class="info"><strong>Username:</strong> ${user.username}</div>
+    <div class="info"><strong>Email:</strong> <a href="mailto:${user.email}">${user.email}</a></div>
+    <div class="info"><strong>Phone:</strong> ${user.phone}</div>
+    <div class="info"><strong>Website:</strong> <a href="http://${user.website}" target="_blank">${user.website}</a></div>
+
+    <div class="section-title">Address</div>
+    <div class="info">${user.address.suite}, ${user.address.street}</div>
+    <div class="info">${user.address.city}, ${user.address.zipcode}</div>
+    <div class="info">Lat: ${user.address.geo.lat}, Lng: ${user.address.geo.lng}</div>
+
+    <div class="section-title">Company</div>
+    <div class="info"><strong>Name:</strong> ${user.company.name}</div>
+    <div class="info"><strong>Tagline:</strong> "${user.company.catchPhrase}"</div>
+    <div class="info"><strong>BS:</strong> ${user.company.bs}</div>
+  `;
+                    console.log(user, 'user');
+                    console.log(cardInnerHtml, 'cardInnerHtml');
+
+                    // userList.innerHTML = userList.innerHTML + cardInnerHtml;
+                    // userList.innerHTML += cardInnerHtml;
+                    userList.innerHTML = cardInnerHtml;
+                }
+
             } catch (error) {
                 // document.getElementById('userList').innerHTML = 'Failed to load users.';
                 document.getElementById('userList').innerHTML = `<h1 style="color:red;">Failed to load users.</h1>`;
